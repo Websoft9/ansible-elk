@@ -4,7 +4,7 @@
 
 ## 配置
 
-参考官方方案：https://www.rabbitmq.com/configure.html
+参考官方方案：https://www.elk.com/configure.html
 
 ## 域名绑定
 
@@ -12,7 +12,7 @@
 
 完成域名解析后，从服务器安全和后续维护考量，需要完成**域名绑定**：
 
-RabbitMQ 域名绑定操作步骤：
+ELK 域名绑定操作步骤：
 
 1. 确保域名解析已经生效  
 2. 使用 SFTP 工具登录云服务器
@@ -21,7 +21,7 @@ RabbitMQ 域名绑定操作步骤：
    server
    {
    listen 80;
-   server_name rabbitmq.yourdomain.com;  # 此处修改为你的域名
+   server_name elk.yourdomain.com;  # 此处修改为你的域名
    ...
    }
    ```
@@ -29,15 +29,15 @@ RabbitMQ 域名绑定操作步骤：
 
 ## 重置密码
 
-常用的 RabbitMQ 重置密码相关的操作主要有修改密码和找回密码两种类型：
+常用的 ELK 重置密码相关的操作主要有修改密码和找回密码两种类型：
 
 ### 修改密码
 
-1. 登录 RabbitMQ 后台，依次打开：【Manage】>【Staff】，找到所需修改密码的账号对象
-  ![RabbitMQ 修改密码](https://libs.websoft9.com/Websoft9/DocsPicture/en/rabbitmq/rabbitmq-modifypw001-websoft9.png)
+1. 登录 ELK 后台，依次打开：【Manage】>【Staff】，找到所需修改密码的账号对象
+  ![ELK 修改密码](https://libs.websoft9.com/Websoft9/DocsPicture/en/elk/elk-modifypw001-websoft9.png)
 
 2. 开始修改密码
-  ![RabbitMQ 修改密码](https://libs.websoft9.com/Websoft9/DocsPicture/en/rabbitmq/rabbitmq-modifypw002-websoft9.png)
+  ![ELK 修改密码](https://libs.websoft9.com/Websoft9/DocsPicture/en/elk/elk-modifypw002-websoft9.png)
 
 ### 找回密码
 
@@ -45,5 +45,5 @@ RabbitMQ 域名绑定操作步骤：
 
 1. 完成 [SMTP 设置](/zh/solution-smtp.md)
 
-2. 打开 RabbitMQ 登录页面，点击【Forgot】开始通过邮件找回密码
-  ![Ghost 找回密码](https://libs.websoft9.com/Websoft9/DocsPicture/en/rabbitmq/rabbitmq-forgetpw-websoft9.png)
+2. 打开 ELK 登录页面，点击【Forgot】开始通过邮件找回密码
+  ![Ghost 找回密码](https://libs.websoft9.com/Websoft9/DocsPicture/en/elk/elk-forgetpw-websoft9.png)

@@ -1,17 +1,17 @@
 # Start or Stop the Services
 
-These commands are required when you use the RabbitMQ of Websoft9.
+These commands are required when you use the ELK of Websoft9.
 
-### RabbitMQ
+### ELK
 
 ```shell
-sudo systemctl start rabbitmq-server
-sudo systemctl stop rabbitmq-server
-sudo systemctl restart rabbitmq-server
-sudo systemctl status rabbitmq-server
+sudo systemctl start elk-server
+sudo systemctl stop elk-server
+sudo systemctl restart elk-server
+sudo systemctl status elk-server
 
-# you can use this debug mode if RabbitMQ service can't run
-rabbitmq-server console
+# you can use this debug mode if ELK service can't run
+elk-server console
 ```
 
 ### MySQL

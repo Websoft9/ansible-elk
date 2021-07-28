@@ -1,6 +1,6 @@
 # MySQL
 
-RabbitMQ deployment package includes MySQL and Web-GUI tool phpMyAdmin for MySQL management. 
+ELK deployment package includes MySQL and Web-GUI tool phpMyAdmin for MySQL management. 
 
 Follow the steps below to use it:
 

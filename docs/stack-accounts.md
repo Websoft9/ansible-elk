@@ -4,12 +4,12 @@ Use the **SSH** to connect your Server and run the command `sudo cat /credential
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/common/catdbpassword-websoft9.png)
 
-Here are the required username and password for RabbitMQ installation and configuration.
+Here are the required username and password for ELK installation and configuration.
 
-## RabbitMQ
+## ELK
 
-* RabbitMQ administrator username: `admin`
-* RabbitMQ administrator password: Get it form the file of your server */credentials/password.txt*
+* ELK administrator username: `admin`
+* ELK administrator password: Get it form the file of your server */credentials/password.txt*
   > If there no password.txt exist, the administrator password is `admin`
 
 ## MySQL

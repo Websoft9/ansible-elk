@@ -1,17 +1,17 @@
 # 服务启停
 
-使用由Websoft9提供的 RabbitMQ 部署方案，可能需要用到的服务如下：
+使用由Websoft9提供的 ELK 部署方案，可能需要用到的服务如下：
 
-### RabbitMQ
+### ELK
 
 ```shell
-sudo systemctl start rabbitmq-server
-sudo systemctl stop rabbitmq-server
-sudo systemctl restart rabbitmq-server
-sudo systemctl status rabbitmq-server
+sudo systemctl start elk-server
+sudo systemctl stop elk-server
+sudo systemctl restart elk-server
+sudo systemctl status elk-server
 
-# you can use this debug mode if RabbitMQ service can't run
-rabbitmq-server console
+# you can use this debug mode if ELK service can't run
+elk-server console
 ```
 
 ### MySQL
