@@ -2,18 +2,19 @@
 
 #### ELK 是否支持多语言？
 
-支持
+当前仅英文
 
 #### 本项目中 ELK 采用何种安装方式？
 
-采用 rpm/deb 包的安装方式
+采用[官方提供 Docker 安装](https://github.com/elastic/dockerfiles)方式
 
-#### 如何以调试模式启动ELK服务？
+#### ELK 采用哪种开源许可？
 
-```
-systemctl stop elk-server
-elk-server console
-```
+[ELASTIC-LICENSE](https://github.com/elastic/elasticsearch/blob/master/licenses/ELASTIC-LICENSE-2.0.txt)
+
+#### Elasticsearch 全部免费吗？
+
+Elasticsearch 由之前的开源版+商业扩展包 xpack 组成。其中 xpack 基本功能免费，需要使用全部功能可以向官方申请 30 天的免费试用期，试用期结束后回归到基本功能或订阅。  
 
 #### 是否可以通过命令行修改ELK后台密码？
 
