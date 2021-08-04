@@ -1,45 +1,21 @@
-# Global
+# global
 region: "0"
 
-common_os_support: ["CentOS", "Ubuntu", "Amazon", "OracleLinux"]
-
-apache_certbot: True
-nginx_certbot: True
-
-nginx_reverse_proxy_port: "8065"
-
-# role_mysql
-mysql_version: "5.7"       
-mysql_root_password: "123456"
-mysql_remote: True
+common_install_docker: True
+docker_install: False
 
 # docker
-docker_applications: 
-  - phpmyadmin
+docker_applications:
+  - elasticsearch
+  - kibana
+  - logstash
 
-# add databases and users
-mysql_databases:
- - name: rabbitmq
+init_docker:
+  elk:
+    admin_username: user@domain.com
+    admin_password: "elk"
+    service_after: "docker.service"
+    compose_path: "/data/wwwroot/elk/docker-compose.yml"
+    compose_commands:
+      - sudo sed -i "s/elk/$new_password/g" /data/wwwroot/elk/docker-compose.yml
  
-mysql_users:
- - name: rabbitmq
-   host: localhost
-   priv: 'rabbitmq.*:ALL'
-
-# init passsword of database
-init_db: 
-    mysql:
-      admin: root
-      user: ["ghost"]
-      password: "123456"  
-  
-# init password of applications
-init_application:
-  rabbitmq:
-    service: rabbitmq
-    database: rabbitmq 
-    database_user: rabbitmq
-    database_host: localhost
-    database_password: "123456"
-    config_path:
-      - /opt/rabbitmq/config/config.json
