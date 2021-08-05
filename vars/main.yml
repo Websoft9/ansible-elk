@@ -1,13 +1,6 @@
 # global
 region: "0"
 
-common_install_docker: True
-docker_install: False
-
-# docker
-docker_applications:
-  - elasticsearch
-
 init_docker:
   elk:
     admin_username: elastic
@@ -17,3 +10,4 @@ init_docker:
     compose_commands:
       - sudo sed -i "s/changeme/$new_password/g" /data/wwwroot/elk/.env_all
       - sudo sed -i "s/changeme/$new_password/g" /data/wwwroot/elk/kibana/config/kibana.yml
+      - sudo sed -i "s/changeme/$new_password/g" /data/wwwroot/elk/logstash/config/logstash.yml
