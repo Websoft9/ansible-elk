@@ -10,7 +10,6 @@
     - { role: role_common, tags: "role_common"}  
     - { role: role_cloud, tags: "role_cloud"}  
     - { role: elk, tags: "elk"}
-    - { role: role_docker, tags: "role_docker"}
     - { role: role_init, tags: "role_init"}
     - { role: role_preend, tags: "preend"}
     - { role: role_end, tags: "role_end"}

@@ -10,10 +10,10 @@ docker_applications:
 
 init_docker:
   elk:
-    admin_username: user@domain.com
+    admin_username: elastic
     admin_password: "changeme"
     service_after: "docker.service"
     compose_path: "/data/wwwroot/elk/docker-compose.yml"
     compose_commands:
-      - sudo sed -i "s/elk/$new_password/g" /data/wwwroot/elk/docker-compose.yml
- 
+      - sudo sed -i "s/changeme/$new_password/g" /data/wwwroot/elk/.env_all
+      - sudo sed -i "s/changeme/$new_password/g" /data/wwwroot/elk/kibana/config/kibana.yml
