@@ -7,13 +7,11 @@ docker_install: False
 # docker
 docker_applications:
   - elasticsearch
-  - kibana
-  - logstash
 
 init_docker:
   elk:
     admin_username: user@domain.com
-    admin_password: "elk"
+    admin_password: "changeme"
     service_after: "docker.service"
     compose_path: "/data/wwwroot/elk/docker-compose.yml"
     compose_commands:
