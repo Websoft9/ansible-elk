@@ -39,18 +39,18 @@ Run the automatic installation script with **root** authority to start the insta
 
 ```
 $ sudo su -
-$ wget -N https://raw.githubusercontent.com/Websoft9/ansible-linux/main/scripts/install.sh; bash install.sh -r rabbitmq
+$ wget -N https://raw.githubusercontent.com/Websoft9/ansible-linux/main/scripts/install.sh; bash install.sh -r Elastic
 ```
 
 If the network is broken or blocked, SSH will be interrupted and the installation will fail. Please reinstall.
 
 #### Image on Cloud 
 
-Follow our [RabbitMQ image](https://apps.websoft9.com/rabbitmq) for installation on major Cloud Platform.
+Follow our [RabbitMQ image](https://apps.websoft9.com/Elastic) for installation on major Cloud Platform.
 
 ## Documentation
 
-**[Administrator Guide](https://support.websoft9.com/docs/rabbitmq)** 
+**[Administrator Guide](https://support.websoft9.com/docs/Elastic)** 
 
 ## License
 
@@ -65,7 +65,7 @@ This program provided by Websoft9 contains a series of software with separate co
 #### How to install and view the latest release?
 
 This repository install way is Package isntallation | Compile isntallation for source | Isntallation for download binaries files , you can  view the version from [Official URL] (https://www.rabbitmq.com/download.html).  
-We will check [Release version](https://github.com/Websoft9/ansible-rabbitmq/releases) regularly. Update and test this project to ensure that users can successfully install the required version of RabbitMQ.
+We will check [Release version](https://github.com/Websoft9/ansible-Elastic/releases) regularly. Update and test this project to ensure that users can successfully install the required version of RabbitMQ.
 
 Learn more about [Version](version.md).
 #### Can I run this repository on Ansible Tower? 
