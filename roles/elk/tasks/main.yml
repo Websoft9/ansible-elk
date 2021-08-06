@@ -27,6 +27,14 @@
   args:
     chdir: /data/wwwroot/elk
 
+- name: Set vm.max_map_count=262144
+  become: yes
+  sysctl:
+    name: vm.max_map_count
+    value: 262144
+    state: present
+    reload: yes
+
 - name: Check elasticsearch,kibana,logstash version
   shell: |
     sudo echo -e "elk_version: `docker exec -it elk-elasticsearch bin/elasticsearch --version | awk -F ' ' '{print $2}'`" |sudo tee -a /data/logs/install_version.txt
