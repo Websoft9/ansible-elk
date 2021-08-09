@@ -5,7 +5,7 @@
 
 本项目是由 [Websoft9](https://www.websoft9.com) 研发的 [Elastic](https://www.elastic.co/) 自动化安装程序，开发语言是 Ansible。使用本项目，只需要用户在 Linux 上运行一条命令，即可自动化安装 Elastic，并预配置必要项，让原本复杂的安装和与配置过程变得没有任何技术门槛。
 
-本项目支持的一系列开源PHP应用，包括：</br>                   </br>[chanzhi,cmseasy,codiad,dolibarr,dreamfactory,dzzoffice,empirecms,espocrm,kodcloud,laravel,mantisbt,matomo,onethink,pydio,ranzhi,resourcespace,suitecrm,symfony,testlink,thinkcmf,thinkphp,vanilla,vtigercrm,zurmo,zdoo](/roles/phpapps/tasks)等</br>                   </br>对于更热门的PHP应用程序，我们为之开发了单独的项目</br>                   </br>* [WordPress](https://github.com/Websoft9/ansible-wordpress)</br>* [Joomla](https://github.com/Websoft9/ansible-joomla)</br>* [Drupal](https://github.com/Websoft9/ansible-drupal)</br>* [ownCloud](https://github.com/Websoft9/ansible-owncloud)
+
 ## 配置要求
 
 安装本项目，确保符合如下的条件：
