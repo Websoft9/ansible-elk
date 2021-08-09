@@ -4,8 +4,7 @@
   "official_url": "https://www.elastic.co/",
   "support_os": "CentOS7.x, Ubuntu20.04, Amazon Linux2",
   "introduction_extra": {
-    "en": "CentOS7.x, Ubuntu20.04, Amazon Linux2",
-    "zh": "本项目支持的一系列开源PHP应用，包括：</br>                   </br>[chanzhi,cmseasy,codiad,dolibarr,dreamfactory,dzzoffice,empirecms,espocrm,kodcloud,laravel,mantisbt,matomo,onethink,pydio,ranzhi,resourcespace,suitecrm,symfony,testlink,thinkcmf,thinkphp,vanilla,vtigercrm,zurmo,zdoo](/roles/phpapps/tasks)等</br>                   </br>对于更热门的PHP应用程序，我们为之开发了单独的项目</br>                   </br>* [WordPress](https://github.com/Websoft9/ansible-wordpress)</br>* [Joomla](https://github.com/Websoft9/ansible-joomla)</br>* [Drupal](https://github.com/Websoft9/ansible-drupal)</br>* [ownCloud](https://github.com/Websoft9/ansible-owncloud)"
+    "en": "CentOS7.x, Ubuntu20.04, Amazon Linux2"
   },
   "requirements_cpu": "2",
   "requirements_memory": "4",
