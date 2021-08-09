@@ -1,7 +1,7 @@
 {
   "name": "Elastic",
-  "trademark": "RabbitMQ",
-  "official_url": "https://rabbitmq.io/",
+  "trademark": "Elastic",
+  "official_url": "https://www.elastic.co/",
   "support_os": "CentOS7.x, Ubuntu20.04, Amazon Linux2",
   "introduction_extra": {
     "en": "CentOS7.x, Ubuntu20.04, Amazon Linux2",
@@ -12,43 +12,20 @@
   "requirements_Bandwidth": "100",
   "requirements_disk": "20",
   "requirements_swap": "2",
-  "requirements_configure_url": "https://www.rabbitmq.com/download.html",
-  "components": "RabbitMQ, MySQL8.0, MongoDB, adminMongo on Docker, phpMyAdmin on Docker, Nginx or Apache(optional)",
+  "requirements_configure_url": "https://www.elastic.co/downloads/elasticsearch",
+  "components": "  ",
   "components_extra": {
-    "en": "the extral compentents: chanzhi, cmseasy, codiad, dolibarr, dreamfactory. ",
-    "zh": "额外的相关应用组件为chanzhi，cmseasy，codiad，dolibarr, dreamfactory。"
+    "en": "the extral compentents: Elasticsearch, Kibana, Logstash. ",
+    "zh": "额外的相关应用组件为Elasticsearch, Kibana, Logstash。"
   },
   "install_way": {
     "en": "Package isntallation | Compile isntallation for source | Isntallation for download binaries files ",
     "zh": "包安装 | 下载源码编译安装 | 下载可执行二进制包解压安装"
   },
-  "install_url": "https://www.rabbitmq.com/download.html",
-  "release_url": "https://github.com/Websoft9/ansible-rabbitmq/releases",
+  "install_url": "https://www.elastic.co/downloads/elasticsearch",
+  "release_url": "https://www.elastic.co/guide/en/elasticsearch/reference/7.9/es-release-notes.html",
   "release_extra": {
     "en": "Learn more about [Version](version.md).",
     "zh": "阅读应用的[版本号管理](version.md)文档，了解更多详情。"
-  },
-  "faqs": {
-    "en": [
-      {
-        "question": "Why add this question？",
-        "answer": "This is a good question, it can make humans feedoom!"
-      },
-      {
-        "question": "Why change template？",
-        "answer": "World is changed!"
-      }
-     ],
-     "zh": [
-      {
-        "question": "为什么要追加问题1？",
-        "answer": "这是指一个范例，没什么特别的。"
-      },
-      {
-        "question": "为什么要追加问题2？",
-        "answer": "十万个为什么。"
-      }
-     ]
   }
- 
 }
