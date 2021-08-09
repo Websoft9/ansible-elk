@@ -1,4 +1,4 @@
-# RabbitMQ Cloud Installer
+# Elastic Cloud Installer
 
 ![](https://libs.websoft9.com/common/websott9-cloud-installer.png) 
 
@@ -6,7 +6,7 @@
 
 [English](/README.md) | [简体中文](/README-zh.md)  
 
-**RabbitMQ Cloud Installer**, developed by [Websoft9](https://www.websoft9.com), is an automatic installation program of [RabbitMQ](https://rabbitmq.io/) based on Ansible and shell. It helps user install RabbitMQ and pre-configure required items automatically and users only need to run a command on Linux. It simplifies the complicated installation and initialization process.  
+**Elastic Cloud Installer**, developed by [Websoft9](https://www.websoft9.com), is an automatic installation program of [Elastic](https://www.elastic.co/) based on Ansible and shell. It helps user install Elastic and pre-configure required items automatically and users only need to run a command on Linux. It simplifies the complicated installation and initialization process.  
 
 CentOS7.x, Ubuntu20.04, Amazon Linux2
 ## System Requirement
@@ -20,13 +20,13 @@ System Requirement to install this repository are as following：
 | Private Cloud     | KVM, VMware, VirtualBox, OpenStack    | Optional                 |
 | Server Configuration | vCPU no less than 2 core, Memory no less than 4 GIB, Storage no less than 20 GB, Swap no less than 2GB |Bandwidth no less than 100M|
 
-To learn more information, please view [Installation & Configuration](https://www.rabbitmq.com/download.html).
+To learn more information, please view [Installation & Configuration](https://www.elastic.co/downloads/elasticsearch).
 
 ## Ecosystem
 
-Core components of this repository: RabbitMQ, MySQL8.0, MongoDB, adminMongo on Docker, phpMyAdmin on Docker, Nginx or Apache(optional)
+Core components of this repository:   
 
-the extral compentents: chanzhi, cmseasy, codiad, dolibarr, dreamfactory. 
+the extral compentents: Elasticsearch, Kibana, Logstash. 
 Learn more about [Parameters](/docs/stack-components.md).
 
 ## Installation
@@ -46,7 +46,7 @@ If the network is broken or blocked, SSH will be interrupted and the installatio
 
 #### Image on Cloud 
 
-Follow our [RabbitMQ image](https://apps.websoft9.com/Elastic) for installation on major Cloud Platform.
+Follow our [Elastic image](https://apps.websoft9.com/Elastic) for installation on major Cloud Platform.
 
 ## Documentation
 
@@ -64,8 +64,8 @@ This program provided by Websoft9 contains a series of software with separate co
 
 #### How to install and view the latest release?
 
-This repository install way is Package isntallation | Compile isntallation for source | Isntallation for download binaries files , you can  view the version from [Official URL] (https://www.rabbitmq.com/download.html).  
-We will check [Release version](https://github.com/Websoft9/ansible-Elastic/releases) regularly. Update and test this project to ensure that users can successfully install the required version of RabbitMQ.
+This repository install way is Package isntallation | Compile isntallation for source | Isntallation for download binaries files , you can  view the version from [Official URL] (https://www.elastic.co/downloads/elasticsearch).  
+We will check [Release version](https://github.com/Websoft9/ansible-Elastic/releases) regularly. Update and test this project to ensure that users can successfully install the required version of Elastic.
 
 Learn more about [Version](version.md).
 #### Can I run this repository on Ansible Tower? 
@@ -76,7 +76,3 @@ Yes.
 
 Suggest you read the document [Deploy by Image vs Deploy by Script](https://support.websoft9.com/docs/faq/bz-product.html#deployment-comparison).
 
-#### Why add this question？  
-This is a good question, it can make humans feedoom!  
-#### Why change template？  
-World is changed!  
