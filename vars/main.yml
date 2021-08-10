@@ -11,12 +11,6 @@ init_docker:
     service_after: "docker.service"
     compose_path: "/data/wwwroot/elk/docker-compose.yml"
     compose_commands:
-<<<<<<< HEAD
       - sudo sed -i "s/changeme/$new_password/g" `grep 'changeme' /data/wwwroot/elk/.env -rnl`
       - sudo sed -i "s/changeme/$new_password/g" `grep 'changeme' /data/wwwroot/elk/kibana/config/kibana.yml -rnl`
       - sudo sed -i "s/changeme/$new_password/g" `grep 'changeme' /data/wwwroot/elk/logstash -rnl`
-=======
-      - sudo sed -i "s/changeme/$new_password/g" `grep 'changeme' /data/wwwroot/elk/.env_all -rnl`
-      - sudo sed -i "s/changeme/$new_password/g" `grep 'changeme' /data/wwwroot/elk/kibana -rnl`
-      - sudo sed -i "s/changeme/$new_password/g" `grep 'changeme' /data/wwwroot/elk/logstash -rnl`
->>>>>>> adf75da7f8bbf24446c26659fde88feae0abcba1
