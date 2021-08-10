@@ -5,7 +5,6 @@
 
 本项目是由 [Websoft9](https://www.websoft9.com) 研发的 [Elastic](https://www.elastic.co/) 自动化安装程序，开发语言是 Ansible。使用本项目，只需要用户在 Linux 上运行一条命令，即可自动化安装 Elastic，并预配置必要项，让原本复杂的安装和与配置过程变得没有任何技术门槛。
 
-
 ## 配置要求
 
 安装本项目，确保符合如下的条件：
@@ -21,9 +20,8 @@
 
 ## 组件
 
-包含的核心组件为：    
+包含的核心组件为：Elasticsearch, Kibana, Logstash,nginx  
 
-额外的相关应用组件为Elasticsearch, Kibana, Logstash。
 更多请见: [参数表](/docs/zh/stack-components.md)。
 
 ## 安装指南

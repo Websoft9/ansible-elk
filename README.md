@@ -8,7 +8,6 @@
 
 **Elastic Cloud Installer**, developed by [Websoft9](https://www.websoft9.com), is an automatic installation program of [Elastic](https://www.elastic.co/) based on Ansible and shell. It helps user install Elastic and pre-configure required items automatically and users only need to run a command on Linux. It simplifies the complicated installation and initialization process.  
 
-CentOS7.x, Ubuntu20.04, Amazon Linux2
 ## System Requirement
 
 System Requirement to install this repository are as following：
@@ -24,9 +23,8 @@ To learn more information, please view [Installation & Configuration](https://ww
 
 ## Ecosystem
 
-Core components of this repository:   
+Core components of this repository: Elasticsearch, Kibana, Logstash,nginx
 
-the extral compentents: Elasticsearch, Kibana, Logstash. 
 Learn more about [Parameters](/docs/stack-components.md).
 
 ## Installation
