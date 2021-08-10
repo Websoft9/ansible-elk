@@ -4,6 +4,11 @@ region: "0"
 common_install_docker: True
 docker_install: False
 
+nginx_vhost_mode: "reverse"
+nginx_reverse_proxy_port: "9001"
+nginx_appname: "ELK"
+
+
 init_docker:
   elk:
     admin_username: elastic
