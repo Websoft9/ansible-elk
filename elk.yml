@@ -8,7 +8,8 @@
 
   roles:
     - { role: role_common, tags: "role_common"}  
-    - { role: role_cloud, tags: "role_cloud"}  
+    - { role: role_cloud, tags: "role_cloud"}
+    - { role: role_nginx, tags: "role_nginx"}
     - { role: elk, tags: "elk"}
     - { role: role_init, tags: "role_init"}
     - { role: role_preend, tags: "preend"}
