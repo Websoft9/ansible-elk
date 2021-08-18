@@ -23,7 +23,7 @@ To learn more information, please view [Installation & Configuration](https://ww
 
 ## Ecosystem
 
-Core components of this repository: Elasticsearch, Kibana, Logstash,nginx
+Core components of this repository: Elasticsearch on Docker, Kibana on Docker, Logstash on Docker, nginx, Docker
 
 Learn more about [Parameters](/docs/stack-components.md).
 
@@ -65,7 +65,7 @@ This program provided by Websoft9 contains a series of software with separate co
 This repository install way is Docker install, you can  view the version from [Official URL](https://www.elastic.co/downloads/elasticsearch).  
 We will check [Release version](https://github.com/Websoft9/ansible-Elastic/releases) regularly. Update and test this project to ensure that users can successfully install the required version of Elastic.
 
-Learn more about [Version](version.md).
+Learn more about [Version](https://github.com/Websoft9/ansible-elk/releases/tag/ELK-v7.13.4-1).
 #### Can I run this repository on Ansible Tower? 
 
 Yes.
