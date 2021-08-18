@@ -1,4 +1,4 @@
-# Elastic Cloud Installer
+# elk Cloud Installer
 
 ![](https://libs.websoft9.com/common/websott9-cloud-installer.png) 
 
@@ -6,7 +6,7 @@
 
 [English](/README.md) | [简体中文](/README-zh.md)  
 
-**Elastic Cloud Installer**, developed by [Websoft9](https://www.websoft9.com), is an automatic installation program of [Elastic](https://www.elastic.co/) based on Ansible and shell. It helps user install Elastic and pre-configure required items automatically and users only need to run a command on Linux. It simplifies the complicated installation and initialization process.  
+**elk Cloud Installer**, developed by [Websoft9](https://www.websoft9.com), is an automatic installation program of [elk](https://www.elastic.co/) based on Ansible and shell. It helps user install elk and pre-configure required items automatically and users only need to run a command on Linux. It simplifies the complicated installation and initialization process.  
 
 ## System Requirement
 
@@ -37,18 +37,18 @@ Run the automatic installation script with **root** authority to start the insta
 
 ```
 $ sudo su -
-$ wget -N https://raw.githubusercontent.com/Websoft9/ansible-linux/main/scripts/install.sh; bash install.sh -r Elastic
+$ wget -N https://raw.githubusercontent.com/Websoft9/ansible-linux/main/scripts/install.sh; bash install.sh -r elk
 ```
 
 If the network is broken or blocked, SSH will be interrupted and the installation will fail. Please reinstall.
 
 #### Image on Cloud 
 
-Follow our [Elastic image](https://apps.websoft9.com/Elastic) for installation on major Cloud Platform.
+Follow our [elk image](https://apps.websoft9.com/elk) for installation on major Cloud Platform.
 
 ## Documentation
 
-**[Administrator Guide](https://support.websoft9.com/docs/Elastic)** 
+**[Administrator Guide](https://support.websoft9.com/docs/elk)** 
 
 ## License
 
@@ -63,7 +63,7 @@ This program provided by Websoft9 contains a series of software with separate co
 #### How to install and view the latest release?
 
 This repository install way is Docker install, you can  view the version from [Official URL](https://www.elastic.co/downloads/elasticsearch).  
-We will check [Release version](https://github.com/Websoft9/ansible-Elastic/releases) regularly. Update and test this project to ensure that users can successfully install the required version of Elastic.
+We will check [Release version](https://github.com/Websoft9/ansible-elk/releases) regularly. Update and test this project to ensure that users can successfully install the required version of elk.
 
 #### Can I run this repository on Ansible Tower? 
 
