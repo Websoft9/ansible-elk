@@ -1,4 +1,4 @@
-# elk Cloud Installer
+# ELK Cloud Installer
 
 ![](https://libs.websoft9.com/common/websott9-cloud-installer.png) 
 
@@ -6,7 +6,7 @@
 
 [English](/README.md) | [简体中文](/README-zh.md)  
 
-**elk Cloud Installer**, developed by [Websoft9](https://www.websoft9.com), is an automatic installation program of [elk](https://www.elastic.co/) based on Ansible and shell. It helps user install elk and pre-configure required items automatically and users only need to run a command on Linux. It simplifies the complicated installation and initialization process.  
+**ELK Cloud Installer**, developed by [Websoft9](https://www.websoft9.com), is an automatic installation program of [ELK](https://www.elastic.co/) based on Ansible and shell. It helps user install ELK and pre-configure required items automatically and users only need to run a command on Linux. It simplifies the complicated installation and initialization process.  
 
 ## System Requirement
 
@@ -44,7 +44,7 @@ If the network is broken or blocked, SSH will be interrupted and the installatio
 
 #### Image on Cloud 
 
-Follow our [elk image](https://apps.websoft9.com/elk) for installation on major Cloud Platform.
+Follow our [ELK image](https://apps.websoft9.com/elk) for installation on major Cloud Platform.
 
 ## Documentation
 
@@ -62,8 +62,8 @@ This program provided by Websoft9 contains a series of software with separate co
 
 #### How to install and view the latest release?
 
-This repository install way is Docker install, you can  view the version from [Official URL](https://www.elastic.co/downloads/elasticsearch).  
-We will check [Release version](https://github.com/Websoft9/ansible-elk/releases) regularly. Update and test this project to ensure that users can successfully install the required version of elk.
+This repository install way is Docker install, you can  view the version from [Official URL](https://github.com/deviantony/docker-elk/blob/main/.env).  
+We will check [Release version](https://github.com/Websoft9/ansible-elk/releases) regularly. Update and test this project to ensure that users can successfully install the required version of ELK.
 
 #### Can I run this repository on Ansible Tower? 
 
