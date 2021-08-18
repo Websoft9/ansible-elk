@@ -1,6 +1,6 @@
 {
   "name": "elk",
-  "trademark": "elk",
+  "trademark": "ELK",
   "official_url": "https://www.elastic.co/",
   "support_os": "CentOS7.x, Ubuntu20.04, Amazon Linux2",
   "requirements_cpu": "2",
@@ -14,6 +14,6 @@
     "en": "Docker install",
     "zh": "Docker 安装"
   },
-  "install_url": "https://www.elastic.co/downloads/elasticsearch",
+  "install_url": "https://github.com/deviantony/docker-elk/blob/main/.env",
   "release_url": "https://www.elastic.co/guide/en/elasticsearch/reference/7.9/es-release-notes.html"
 }
