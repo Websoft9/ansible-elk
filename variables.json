@@ -9,7 +9,7 @@
   "requirements_disk": "20",
   "requirements_swap": "2",
   "requirements_configure_url": "https://www.elastic.co/downloads/elasticsearch",
-  "components": "Elasticsearch, Kibana, Logstash,nginx",
+  "components": "Elasticsearch on Docker, Kibana on Docker, Logstash on Docker, nginx, Docker",
   "install_way": {
     "en": "Docker install",
     "zh": "Docker 安装"
@@ -17,7 +17,7 @@
   "install_url": "https://www.elastic.co/downloads/elasticsearch",
   "release_url": "https://www.elastic.co/guide/en/elasticsearch/reference/7.9/es-release-notes.html",
   "release_extra": {
-    "en": "Learn more about [Version](version.md).",
-    "zh": "阅读应用的[版本号管理](version.md)文档，了解更多详情。"
+    "en": "Learn more about [Version](https://github.com/Websoft9/ansible-elk/releases/tag/ELK-v7.13.4-1).",
+    "zh": "阅读应用的[版本号管理](https://github.com/Websoft9/ansible-elk/releases/tag/ELK-v7.13.4-1)文档，了解更多详情。"
   }
 }
