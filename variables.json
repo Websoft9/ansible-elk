@@ -1,6 +1,6 @@
 {
-  "name": "Elastic",
-  "trademark": "Elastic",
+  "name": "elk",
+  "trademark": "elk",
   "official_url": "https://www.elastic.co/",
   "support_os": "CentOS7.x, Ubuntu20.04, Amazon Linux2",
   "requirements_cpu": "2",
