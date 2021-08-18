@@ -15,9 +15,5 @@
     "zh": "Docker 安装"
   },
   "install_url": "https://www.elastic.co/downloads/elasticsearch",
-  "release_url": "https://www.elastic.co/guide/en/elasticsearch/reference/7.9/es-release-notes.html",
-  "release_extra": {
-    "en": "Learn more about [Version](version.md).",
-    "zh": "阅读应用的[版本号管理](version.md)文档，了解更多详情。"
-  }
+  "release_url": "https://www.elastic.co/guide/en/elasticsearch/reference/7.9/es-release-notes.html"
 }
