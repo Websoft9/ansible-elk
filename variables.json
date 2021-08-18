@@ -11,8 +11,8 @@
   "requirements_configure_url": "https://www.elastic.co/downloads/elasticsearch",
   "components": "Elasticsearch, Kibana, Logstash,nginx",
   "install_way": {
-    "en": "Package isntallation | Compile isntallation for source | Isntallation for download binaries files ",
-    "zh": "包安装 | 下载源码编译安装 | 下载可执行二进制包解压安装"
+    "en": "Docker install",
+    "zh": "Docker 安装"
   },
   "install_url": "https://www.elastic.co/downloads/elasticsearch",
   "release_url": "https://www.elastic.co/guide/en/elasticsearch/reference/7.9/es-release-notes.html",
