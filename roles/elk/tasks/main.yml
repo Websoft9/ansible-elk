@@ -19,9 +19,6 @@
 
 - name: Rename and Run docker-compose
   shell: |
-    rm -rf docker-compose.yml .env
-    mv docker-compose-production.yml docker-compose.yml
-    mv .env_all .env
     docker-compose up -d
     sleep 30
   args:
