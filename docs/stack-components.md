@@ -127,16 +127,9 @@ lsb_release -a
 # Nginx  Version
 nginx -V
 
-# Java version
-java -v
-
 # Docker Version
 docker -v
 
-# erlang  Version
-yum info erlang
-apt show erlang
-
 # ELK version
-elkctl status | grep ELK*
+docker exec -it elk-elasticsearch bin/elasticsearch --version
 ```
