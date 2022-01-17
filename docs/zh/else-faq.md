@@ -2,7 +2,7 @@
 
 #### ELK 是否支持多语言？
 
-当前仅英文
+支持，只需在 Kibana 配置文件中增加 `i18n.locale: "zh-CN"` 即可
 
 #### 本项目中 ELK 采用何种安装方式？
 
@@ -16,35 +16,19 @@
 
 Elasticsearch 由之前的开源版+商业扩展包 xpack 组成。其中 xpack 基本功能免费，需要使用全部功能可以向官方申请 30 天的免费试用期，试用期结束后回归到基本功能或订阅。  
 
-#### 是否可以通过命令行修改ELK后台密码？
-
-可以，`elkctl change_password  admin newpassword`
-
 #### 如果没有域名是否可以部署 ELK？
 
 可以，访问`http://服务器公网IP` 即可
 
-#### 数据库 root 用户对应的密码是多少？
-
-密码存放在服务器相关文件中：`/credentials/password.txt`
-
-#### 是否有可视化的数据库管理工具？
-
-有，内置phpMyAdmin，访问地址：*http://服务器公网IP:9090*
-
-#### 如何禁止外界访问phpMyAdmin？
-
-连接服务器，编辑 [phpMyAdmin 配置文件](/zh/stack-components.md#phpmyadmin)，将其中的 `Require all granted` 更改为 `Require ip 192.160.1.0`，然后重启 Apache 服务
-
 #### 是否可以修改ELK的源码路径？
 
-不可以
+可以
 
 #### 如何修改上传的文件权限?
 
 ```shell
 # 拥有者
-chown -R apache.apache /data/wwwroot/
+chown -R nginx.nginx /data/wwwroot/
 # 读写执行权限
 find /data/wwwroot/ -type d -exec chmod 750 {} \;
 find /data/wwwroot/ -type f -exec chmod 640 {} \;

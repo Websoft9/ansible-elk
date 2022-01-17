@@ -5,49 +5,10 @@
 ### ELK
 
 ```shell
-sudo systemctl start elk-server
-sudo systemctl stop elk-server
-sudo systemctl restart elk-server
-sudo systemctl status elk-server
-
-# you can use this debug mode if ELK service can't run
-elk-server console
-```
-
-### MySQL
-
-```shell
-sudo systemctl start mysql
-sudo systemctl stop mysql
-sudo systemctl restart mysql
-sudo systemctl status mysql
-```
-
-### MySQL on Docker
-
-```shell
-sudo docker start redmine-mysql
-sudo docker restart redmine-mysql
-sudo docker stop redmine-mysql
-sudo docker stats redmine-mysql
-```
-
-### Redis
-
-```shell
-systemctl start redis
-systemctl stop redis
-systemctl restart redis
-systemctl status redis
-```
-
-### phpMyAdmin
-
-```shell
-sudo docker start phpmyadmin
-sudo docker stop phpmyadmin
-sudo docker restart phpmyadmin
-sudo docker stats pgadmin
+sudo systemctl start elk-elasticsearch | elk-logstash | elk-kibana
+sudo systemctl stop elk-elasticsearch | elk-logstash | elk-kibana
+sudo systemctl restart elk-elasticsearch | elk-logstash | elk-kibana
+sudo systemctl status elk-elasticsearch | elk-logstash | elk-kibana
 ```
 
 ### Docker

@@ -8,7 +8,7 @@
 
 日志文件路径为：`/data/logs`。检索关键词 **Failed** 或者 **error** 查看错误
 
-#### ELK服务无法启动？
+#### ELK 服务无法启动？
 
 服务无法启动最常见的问题包括：磁盘空间不足，内存不足，配置文件错误。  
 建议先通过命令进行排查  
@@ -21,13 +21,9 @@ df -lh
 free -lh
 
 # 查看服务状态和日志
-systemctl status elk
-journalctl -u elk
+docker logs elk-elasticsearch | elk-logstash | elk-kibana
 ```
 
-#### 在Chrome下修改密码后报错？
+#### Logstash 无法输出到 Elasticsearch？
 
-这个并不是服务器端的问题，只要更新浏览器即可。
-
-![chrome error of ELK](https://libs.websoft9.com/Websoft9/DocsPicture/zh/elk/elk-chromeerror-websoft9.png)
-
+检查 Logstash 的 pipeline 配置文件中 Elasticsearch 账号密码是否正确

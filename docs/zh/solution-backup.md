@@ -54,8 +54,12 @@ sidebarDepth: 3
 ```
 通用的手动备份操作步骤如下：
 
-1. 通过 SFTP 将网站目录（*/data/wwwroot/*）**压缩后**再完整的下载到本地
-2. 通过 phpMyAdmin 逐个导出数据库
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/mysql/phpmyadmin-export-websoft9.png)
-3. 将程序文件和数据库文件放到同一个文件夹，根据日期命名
-4. 备份工作完成
+1. 通过 SFTP 将网站目录（*/data/wwwroot/elk*）**压缩后**再完整的下载到本地
+2. 将程序文件和数据库文件放到同一个文件夹，根据日期命名
+3. 备份工作完成
+
+### ELK 快照
+
+ELK 内置快照备份功能（阅读[官方文档](https://www.elastic.co/guide/en/elasticsearch/reference/7.13/snapshot-restore.html)）
+
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/elk/elk-backupsp-websoft9.png)

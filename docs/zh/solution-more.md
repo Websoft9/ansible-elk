@@ -4,7 +4,8 @@
 
 ## 配置
 
-参考官方方案：https://www.elk.com/configure.html
+ELK 目录下提供了 ELK Stack 各个组件的配置文件，用户可以修改配置文件，然后重启容器即可
+
 
 ## 域名绑定
 
@@ -33,17 +34,15 @@ ELK 域名绑定操作步骤：
 
 ### 修改密码
 
-1. 登录 ELK 后台，依次打开：【Manage】>【Staff】，找到所需修改密码的账号对象
-  ![ELK 修改密码](https://libs.websoft9.com/Websoft9/DocsPicture/en/elk/elk-modifypw001-websoft9.png)
-
-2. 开始修改密码
-  ![ELK 修改密码](https://libs.websoft9.com/Websoft9/DocsPicture/en/elk/elk-modifypw002-websoft9.png)
+登录 Kibana 后，右上角用户图标的【用户配置文件】即可修改密码
 
 ### 找回密码
 
-如果用户忘记了密码，建议通过邮件的方式找回密码：
+如果用户忘记了密码，需通过重新运行容器的方式重置密码：
 
-1. 完成 [SMTP 设置](/zh/solution-smtp.md)
+```
+cd /data/wwwroot/elk
+docker-compose down && docker-compose up -d
+```
 
-2. 打开 ELK 登录页面，点击【Forgot】开始通过邮件找回密码
-  ![Ghost 找回密码](https://libs.websoft9.com/Websoft9/DocsPicture/en/elk/elk-forgetpw-websoft9.png)
+`.env`文件中的 **DB_ES_PASSWORD** 变量即重置后的密码
