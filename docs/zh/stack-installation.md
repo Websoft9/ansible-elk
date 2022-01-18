@@ -27,6 +27,36 @@
 
 ## ELK 入门向导
 
+logstash以日志文件为输入，输出到elasticsearch为例，
+1. logstash.conf建立索引"mytest"
+
+```
+input{
+    file{
+        path => "/var/log/yum.log"
+        type => "elasticsearch"
+        start_position => "beginning"
+    }
+}
+
+output {
+	elasticsearch {
+		hosts => "elasticsearch:9200"
+		user => "elastic"
+		password => "elastic123"
+      index => "mytest"
+	}
+}
+```
+
+
+2. 使用本地电脑浏览器访问网址：**http://服务器公网IP:9200/_cat/indices?v*,  查看索引是否创建成功
+3. 使用本地电脑浏览器访问网址：**http://服务器公网IP:9200/mytest/_search?pretty*, 可以查询相关的日志数据
+4. 使用本地电脑浏览器访问网址：**http://服务器公网IP*, 进入 ELK 登录界面
+5. 点击【Create index pattern】，输入mytest查询到匹配结果，点击【Next step】
+6. 点击【Create index pattern】，配置成功
+
+
 现在开始针对于如何使用 ELK 传输数据，进行完整的说明：
 
 ## 常见问题
