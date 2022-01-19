@@ -15,7 +15,7 @@
       default: 2
 
   post_tasks:
-    - block
+    - block:
       - pause:
           prompt: "Please check is Kibana UI can login in normally, and input Enter to continue ansible install"
           echo: no
