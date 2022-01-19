@@ -65,11 +65,11 @@ output {
   
   ![ELK Index](https://libs.websoft9.com/Websoft9/DocsPicture/zh/elk/elk-wizard5-websoft9.png)
   
-5. 索引在Kibana创建成功，你可以在此检索数据
+5. 索引在Kibana创建成功，可以用时间条件在此检索数据
 
   ![ELK Index](https://libs.websoft9.com/Websoft9/DocsPicture/zh/elk/elk-wizard6-websoft9.png)
   
-现在开始针对于如何使用 ELK 传输数据，进行完整的说明：
+  ![ELK Index](https://libs.websoft9.com/Websoft9/DocsPicture/zh/elk/elk-wizard7-websoft9.png)
 
 ## 常见问题
 
