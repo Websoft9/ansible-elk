@@ -49,7 +49,7 @@ output {
 	}
 }
 ```
-2. 验证Elasticsearch和Logstash是否成功连接，索引数据是否生效(通过URL验证：http://服务器公网IP:9200/mytest/_cat/indices?v)
+2. 验证Elasticsearch和Logstash是否成功连接，索引数据是否生效(通过URL验证：http://服务器公网IP:9200/_cat/indices?v)
   
   ![ELK 验证](https://libs.websoft9.com/Websoft9/DocsPicture/zh/elk/elk-wizardindex-websoft9.png)
   
