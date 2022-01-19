@@ -16,8 +16,8 @@ init_docker:
     service_after: "docker.service"
     compose_path: "/data/wwwroot/elk/docker-compose.yml"
     compose_commands:
-      - sudo sed -i "s/changeme/$new_password/g" `grep 'elastic123' /data/wwwroot/elk/.env -rnl`
-      - sudo sed -i "s/changeme/$new_password/g" `grep 'elastic123' /data/wwwroot/elk/docker-elk/src/logstash/pipeline/logstash.conf -rnl`
+      - sudo sed -i "s/elastic123/$new_password/g" `grep 'elastic123' /data/wwwroot/elk/.env -rnl`
+      - sudo sed -i "s/elastic123/$new_password/g" `grep 'elastic123' /data/wwwroot/elk/docker-elk/src/logstash/pipeline/logstash.conf -rnl`
     commands:
       - sudo docker-compose down -v
       - sudo docker system prune --all --force
