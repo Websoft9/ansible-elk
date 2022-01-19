@@ -15,8 +15,6 @@
       shell: |
         docker-compose down -v
         docker system prune --all --force
-        
-
 
   roles:
     - { role: role_common, tags: "role_common"}  
