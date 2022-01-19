@@ -5,18 +5,27 @@
 
   vars_files:
     - vars/main.yml
+    
+  vars_prompt:
+    - name: 'delete_image'
+      prompt: "Do you want to delete containers and images \n
+      1: Yes\n
+      2: No\n"
+      private: no
+      default: 2
 
   post_tasks:
-    - pause:
-        prompt: "Please check is Kibana UI can login in normally, and input Enter to continue ansible install"
-        echo: no
-      
-    - name: Delete contains and images resources
-      shell: |
-        docker-compose down -v
-        docker system prune --all --force
-      args:
-        chdir: /data/wwwroot/elk
+    - block
+      - pause:
+          prompt: "Please check is Kibana UI can login in normally, and input Enter to continue ansible install"
+          echo: no
+      - name: Delete contains and images resources
+        shell: |
+          docker-compose down -v
+          docker system prune --all --force
+        args:
+          chdir: /data/wwwroot/elk
+      when: delete_image == 1
  
   roles:
     - { role: role_common, tags: "role_common"}  
