@@ -15,7 +15,9 @@
       shell: |
         docker-compose down -v
         docker system prune --all --force
-
+      args:
+        chdir: /data/wwwroot/elk
+ 
   roles:
     - { role: role_common, tags: "role_common"}  
     - { role: role_cloud, tags: "role_cloud"}
