@@ -6,6 +6,18 @@
   vars_files:
     - vars/main.yml
 
+  post_tasks:
+    - pause:
+        prompt: "Please check is Kibana UI can login in normally, and input Enter to continue ansible install"
+        echo: no
+      
+    - name: Delete contains and images resources
+      shell: |
+        docker-compose down -v
+        docker system prune --all --force
+        
+
+
   roles:
     - { role: role_common, tags: "role_common"}  
     - { role: role_cloud, tags: "role_cloud"}
