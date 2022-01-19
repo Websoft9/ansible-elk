@@ -10,7 +10,7 @@
     - name: delete_image
       prompt: "Do you want to delete containers and images \n
       1: Yes\n
-      2: No\n"
+      2: No\n\n"
       private: no
       default: 2
 
