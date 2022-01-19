@@ -27,8 +27,9 @@
 
 ## ELK 入门向导
 
-logstash以日志文件为输入，输出到elasticsearch为例，
-1. logstash.conf建立索引"mytest"
+ELK的数据源多种多样，这里用常见的日志文件为Logstash的输入为例，步骤如下：
+
+1. 在Logstash的配置文件logstash.conf设置索引"mytest"，并重启容器
 
 ```
 input{
@@ -44,19 +45,30 @@ output {
 		hosts => "elasticsearch:9200"
 		user => "elastic"
 		password => "elastic123"
-      index => "mytest"
+                index => "mytest"
 	}
 }
 ```
+2. 验证Elasticsearch和Logstash是否成功连接，索引数据是否生效(通过URL验证：http://服务器公网IP:9200/mytest/_cat/indices?v)
 
+  ![ELK URL验证页面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/elk/elk-wizard1-websoft9.png)
+  
+3. 登陆Kibana，点击【Manage】，再点击右侧菜单的【Index Patterns】
 
-2. 使用本地电脑浏览器访问网址：**http://服务器公网IP:9200/_cat/indices?v*,  查看索引是否创建成功
-3. 使用本地电脑浏览器访问网址：**http://服务器公网IP:9200/mytest/_search?pretty*, 可以查询相关的日志数据
-4. 使用本地电脑浏览器访问网址：**http://服务器公网IP*, 进入 ELK 登录界面
-5. 点击【Create index pattern】，输入mytest查询到匹配结果，点击【Next step】
-6. 点击【Create index pattern】，配置成功
+  ![ELK Index](https://libs.websoft9.com/Websoft9/DocsPicture/zh/elk/elk-wizard2-websoft9.png)
+  
+  ![ELK Index](https://libs.websoft9.com/Websoft9/DocsPicture/zh/elk/elk-wizard3-websoft9.png)
 
+4. 检索"mytest"，根据提示完成创建
 
+  ![ELK Index](https://libs.websoft9.com/Websoft9/DocsPicture/zh/elk/elk-wizard4-websoft9.png)
+  
+  ![ELK Index](https://libs.websoft9.com/Websoft9/DocsPicture/zh/elk/elk-wizard5-websoft9.png)
+  
+5. 索引在Kibana创建成功，你可以在此检索数据
+
+  ![ELK Index](https://libs.websoft9.com/Websoft9/DocsPicture/zh/elk/elk-wizard6-websoft9.png)
+  
 现在开始针对于如何使用 ELK 传输数据，进行完整的说明：
 
 ## 常见问题
