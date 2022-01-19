@@ -7,7 +7,7 @@
     - vars/main.yml
     
   vars_prompt:
-    - name: 'delete_image'
+    - name: delete_image
       prompt: "Do you want to delete containers and images \n
       1: Yes\n
       2: No\n"
@@ -27,11 +27,4 @@
           chdir: /data/wwwroot/elk
       when: delete_image == 1
  
-  roles:
-    - { role: role_common, tags: "role_common"}  
-    - { role: role_cloud, tags: "role_cloud"}
-    - { role: role_nginx, tags: "role_nginx"}
-    - { role: elk, tags: "elk"}
-    - { role: role_init, tags: "role_init"}
-    - { role: role_preend, tags: "preend"}
-    - { role: role_end, tags: "role_end"}
+
