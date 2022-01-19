@@ -12,10 +12,12 @@ nginx_appname: "ELK"
 init_docker:
   elk:
     admin_username: elastic
-    admin_password: "changeme"
+    admin_password: "elastic123"
     service_after: "docker.service"
     compose_path: "/data/wwwroot/elk/docker-compose.yml"
     compose_commands:
-      - sudo sed -i "s/changeme/$new_password/g" `grep 'changeme' /data/wwwroot/elk/.env -rnl`
-      - sudo sed -i "s/changeme/$new_password/g" `grep 'changeme' /data/wwwroot/elk/src/kibana/config/kibana.yml -rnl`
-      - sudo sed -i "s/changeme/$new_password/g" `grep 'changeme' /data/wwwroot/elk/src/logstash -rnl`
+      - sudo sed -i "s/changeme/$new_password/g" `grep 'elastic123' /data/wwwroot/elk/.env -rnl`
+      - sudo sed -i "s/changeme/$new_password/g" `grep 'elastic123' /data/wwwroot/elk/docker-elk/src/logstash/pipeline/logstash.conf -rnl`
+    commands:
+      - sudo docker-compose down -v
+      - sudo docker system prune --all --force
