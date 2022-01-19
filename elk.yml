@@ -9,8 +9,8 @@
   vars_prompt:
     - name: delete_image
       prompt: "Do you want to delete containers and images \n
-      1: Yes\n
-      2: No\n\n"
+      '1': Yes\n
+      '2': No\n\n"
       private: no
       default: 2
 
@@ -25,6 +25,6 @@
           docker system prune --all --force
         args:
           chdir: /data/wwwroot/elk
-      when: delete_image == 1
+      when: delete_image == '1'
  
 
