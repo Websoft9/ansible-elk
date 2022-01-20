@@ -14,15 +14,13 @@
   args:
     chdir: /data/wwwroot/elk
 
-- name: Recursively create volumes directory
+- name: Recursively create directory at ELK root dir
   file:
     path: "{{ item }}"
     state: directory
     recurse: yes
   with_items:
-    - '/data/wwwroot/elk/volumes/elasticsearch'
-    - '/data/wwwroot/elk/volumes/kibana'
-    - '/data/wwwroot/elk/volumes/logstash'
+    - '/data/wwwroot/elk/volumes'
     
 - name: Create docker self volumes to elk
   file:
