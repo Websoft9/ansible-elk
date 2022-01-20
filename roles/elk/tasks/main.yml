@@ -7,6 +7,12 @@
     repo: "{{elk_git_url}}"
     dest: "/data/wwwroot/elk"
 
+- name: Recursively create volumes directory
+  file:
+    path: /data/wwwroot/elk/volumes
+    state: directory
+    recurse: yes
+    
 - name: Create a Apache Log symbolic link
   file:
     src: '{{item.src}}'
