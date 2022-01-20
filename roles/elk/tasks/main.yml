@@ -2,20 +2,21 @@
 - name: Delete elk dir for sec_installation
   shell: rm -rf /data/wwwroot/elk
 
-- name: Clone elk in Websoft9
+- name: Clone ELK in Websoft9
   git:
     repo: "{{elk_git_url}}"
     dest: "/data/wwwroot/elk"
 
-- name: Creat dir for elk
+- name: Create a Apache Log symbolic link
   file:
-    path: "{{item}}"
-    state: directory
+    src: '{{item.src}}'
+    dest: '{{item.dest}}'
+    state: link
     recurse: yes
-  loop:
-    - /data/wwwroot/elk/elasticsearch
-    - /data/wwwroot/elk/kibana
-    - /data/wwwroot/elk/logstash
+  with_items:
+    - {src: /var/lib/docker/volumes/elk_elasticsearch/_data,dest: /data/wwwroot/elk/volumes/elasticsearch}
+    - {src: /var/lib/docker/volumes/elk_kibana/_data,dest: /data/wwwroot/elk/volumes/kibana}
+    - {src: /var/lib/docker/volumes/elk_logstash/_data,dest: /data/wwwroot/elk/volumes/logstash}
 
 - name: Rename and Run docker-compose
   shell: |
