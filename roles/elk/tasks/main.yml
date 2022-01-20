@@ -29,7 +29,6 @@
     src: '{{item.src}}'
     dest: '{{item.dest}}'
     state: link
-    recurse: yes
   with_items:
     - {src: '/var/lib/docker/volumes/elk_elasticsearch/_data', dest: /data/wwwroot/elk/volumes/elasticsearch}
     - {src: '/var/lib/docker/volumes/elk_kibana/_data', dest: /data/wwwroot/elk/volumes/kibana}
