@@ -40,3 +40,15 @@
   shell: sudo docker ps
   register: check_elastic_service
   notify: check_elastic_service
+
+- block:
+  - pause:
+      prompt: "Please login to Kibana UI and check it, then input Enter to continue"
+      echo: no
+  - name: Delete contains and images resources
+    shell: |
+      docker-compose down -v
+      docker system prune --all --force
+    args:
+      chdir: /data/wwwroot/elk
+  when: elk_delete_image == 'y'
