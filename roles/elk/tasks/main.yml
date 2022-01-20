@@ -7,13 +7,20 @@
     repo: "{{elk_git_url}}"
     dest: "/data/wwwroot/elk"
 
+- name: Rename and Run docker-compose
+  shell: |
+    docker-compose up -d
+    sleep 30
+  args:
+    chdir: /data/wwwroot/elk
+
 - name: Recursively create volumes directory
   file:
     path: /data/wwwroot/elk/volumes
     state: directory
     recurse: yes
     
-- name: Create a Apache Log symbolic link
+- name: Create docker self volumes to elk
   file:
     src: '{{item.src}}'
     dest: '{{item.dest}}'
@@ -23,14 +30,7 @@
     - {src: /var/lib/docker/volumes/elk_elasticsearch/_data,dest: /data/wwwroot/elk/volumes/elasticsearch}
     - {src: /var/lib/docker/volumes/elk_kibana/_data,dest: /data/wwwroot/elk/volumes/kibana}
     - {src: /var/lib/docker/volumes/elk_logstash/_data,dest: /data/wwwroot/elk/volumes/logstash}
-
-- name: Rename and Run docker-compose
-  shell: |
-    docker-compose up -d
-    sleep 30
-  args:
-    chdir: /data/wwwroot/elk
-
+    
 - name: Set vm.max_map_count=262144 for hosted machine, otherwise ES start error
   become: yes
   sysctl:
