@@ -16,13 +16,13 @@
 
 - name: Recursively create volumes directory
   file:
-    path: {{ item }}
+    path: "{{ item }}"
     state: directory
     recurse: yes
   with_items:
-    - /data/wwwroot/elk/volumes/elasticsearch
-    - /data/wwwroot/elk/volumes/kibana
-    - /data/wwwroot/elk/volumes/logstash
+    - '/data/wwwroot/elk/volumes/elasticsearch'
+    - '/data/wwwroot/elk/volumes/kibana'
+    - '/data/wwwroot/elk/volumes/logstash'
     
 - name: Create docker self volumes to elk
   file:
