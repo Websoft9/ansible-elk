@@ -16,9 +16,13 @@
 
 - name: Recursively create volumes directory
   file:
-    path: /data/wwwroot/elk/volumes
+    path: {{ item }}
     state: directory
     recurse: yes
+  with_items:
+    - /data/wwwroot/elk/volumes/elasticsearch
+    - /data/wwwroot/elk/volumes/kibana
+    - /data/wwwroot/elk/volumes/logstash
     
 - name: Create docker self volumes to elk
   file:
@@ -27,9 +31,9 @@
     state: link
     recurse: yes
   with_items:
-    - {src: /var/lib/docker/volumes/elk_elasticsearch/_data,dest: /data/wwwroot/elk/volumes/elasticsearch}
-    - {src: /var/lib/docker/volumes/elk_kibana/_data,dest: /data/wwwroot/elk/volumes/kibana}
-    - {src: /var/lib/docker/volumes/elk_logstash/_data,dest: /data/wwwroot/elk/volumes/logstash}
+    - {src: /var/lib/docker/volumes/elk_elasticsearch/_data, dest: /data/wwwroot/elk/volumes/elasticsearch}
+    - {src: /var/lib/docker/volumes/elk_kibana/_data, dest: /data/wwwroot/elk/volumes/kibana}
+    - {src: /var/lib/docker/volumes/elk_logstash/_data, dest: /data/wwwroot/elk/volumes/logstash}
     
 - name: Set vm.max_map_count=262144 for hosted machine, otherwise ES start error
   become: yes
