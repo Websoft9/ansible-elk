@@ -29,7 +29,7 @@
 
 ELK的数据源多种多样，这里用常见的日志文件为Logstash的输入为例，步骤如下：
 
-1. 在Logstash的配置文件logstash.conf设置索引"mytest"，并重启容器
+1. 在Logstash的配置文件/data/wwwroot/elk/src/logstash/pipelinelogstash.conf设置索引"mytest"，并重启容器
 
 ```
 input{
@@ -49,6 +49,13 @@ output {
 	}
 }
 ```
+
+```
+  cd /data/wwwroot/elk
+  docker-compose down
+  docker-compose up -d
+```
+
 2. 验证Elasticsearch和Logstash是否成功连接，索引数据是否生效(通过URL验证：http://服务器公网IP:9200/_cat/indices?v)
   
   ![ELK 验证](https://libs.websoft9.com/Websoft9/DocsPicture/zh/elk/elk-wizardindex-websoft9.png)
