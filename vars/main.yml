@@ -14,4 +14,4 @@ init_application:
     password: "elastic123"
     commands:
       - sudo sed -i "s/elastic123/$new_password/g" `grep 'elastic123' /data/wwwroot/elk/.env -rnl`
-      - sudo sed -i "s/elastic123/$new_password/g" `grep 'elastic123' /data/wwwroot/elk/docker-elk/src/logstash/pipeline/logstash.conf -rnl`
+      - sudo sed -i "s/elastic123/$new_password/g" `grep 'elastic123' /data/wwwroot/elk/src/logstash/pipeline/logstash.conf -rnl`
