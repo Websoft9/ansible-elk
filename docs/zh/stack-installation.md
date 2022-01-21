@@ -29,8 +29,7 @@
 
 ELK的数据源多种多样，这里用常见的日志文件为Logstash的输入为例，步骤如下：
 
-1. 在Logstash的配置文件/data/wwwroot/elk/src/logstash/pipelinelogstash.conf设置索引"mytest"，并重启容器
-
+1. 在Logstash的配置文件/data/wwwroot/elk/src/logstash/pipelinelogstash.conf设置索引"mytest"，并重启容器（[不知道账号密码？](/zh/stack-accounts.md#elk)）
 ```
 input{
     file{
@@ -44,7 +43,7 @@ output {
 	elasticsearch {
 		hosts => "elasticsearch:9200"
 		user => "elastic"
-		password => "elastic123"
+		password => "xxxxx"
                 index => "mytest"
 	}
 }
